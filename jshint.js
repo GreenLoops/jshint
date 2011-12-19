@@ -1252,7 +1252,7 @@ unclosedString:     for (;;) {
                                 // always allow new line if escaped, but show
                                 // warning if option is not set
                                 allowNewLine = true;
-                                if (option.multistr) {
+                                if (true || option.multistr) {
                                     if (jsonmode) {
                                         warningAt("Avoid EOL escapement.", line, character);
                                     }
@@ -2750,7 +2750,7 @@ loop:   for (;;) {
     reserve('else');
     reserve('case').reach = true;
     reserve('catch');
-    reserve('default').reach = true;
+    //reserve('default').reach = true;
     reserve('finally');
     reservevar('arguments', function (x) {
         if (directive['use strict'] && funct['(global)']) {
@@ -3883,7 +3883,7 @@ loop:   for (;;) {
     reserve('private');
     reserve('protected');
     reserve('public');
-    reserve('static');
+    //reserve('static');
 
 
 // Parse JSON
